@@ -5,15 +5,15 @@ class PassengersController < ApplicationController
   end
 
   def show
-    @passengers = Passenger.find(params[:id])
+    @passenger = Passenger.find(params[:id])
   end
 
   def new
-    @passengers = Passenger.new
+    @passenger = Passenger.new
   end
 
   def create
-    @passengers = Passenger.new( passenger_params )
+    @passengers = Passenger.new(passenger_params)
     @passengers.save
     redirect_to passengers_path
   end

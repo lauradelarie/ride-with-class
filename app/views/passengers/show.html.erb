@@ -1,9 +1,9 @@
-<h1><%= @passengers.name %></h1>
+<h1><%= @passenger.name %></h1>
 
-<p>Age: <%= @passengers.age %></p>
-<p> Gender: <%= @passengers.gender %></p>
+<p>Age: <%= @passenger.age %></p>
+<p> Gender: <%= @passenger.gender %></p>
 
 
-<%= link_to "[Delete]", passenger_path( @passengers.id ), method: :delete, data: { confirm: "Are you sure?" } %>
+<%= link_to "[Delete]", passenger_path( @passenger.id ), method: :delete, data: { confirm: "Are you sure?" } %>
 
 <%= link_to "[All Passenger]", passengers_path %>
