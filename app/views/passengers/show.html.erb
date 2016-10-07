@@ -2,3 +2,8 @@
 
 <p>Age: <%= @passengers.age %></p>
 <p> Gender: <%= @passengers.gender %></p>
+
+
+<%= link_to "[Delete]", passenger_path( @passengers.id ), method: :delete, data: { confirm: "Are you sure?" } %>
+
+<%= link_to "[All Passenger]", passengers_path %>

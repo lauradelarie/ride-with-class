@@ -15,6 +15,7 @@ class PassengersController < ApplicationController
   def create
     @passengers = Passenger.new( passenger_params )
     @passengers.save
+    redirect_to passengers_path
   end
 
   def edit
@@ -22,7 +23,11 @@ class PassengersController < ApplicationController
   end
 
   def destroy
+    @passengers = Passenger.find(params[:id])
 
+    @passengers.destroy
+
+    redirect_to passengers_path
   end
 
   private
