@@ -16,6 +16,6 @@
   <p>There are no passengers in this car.</p>
 <% end %>
 
-<%= link_to "[New Passenger]", new_passenger_path %>
+<%= link_to "[New Passenger]", new_passenger_path(:id => @car.id) %>
 <%= link_to "[Show all Passengers]", passengers_path %>
 <%= link_to 'Back', cars_path %>

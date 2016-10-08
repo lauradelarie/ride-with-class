@@ -9,13 +9,13 @@ class PassengersController < ApplicationController
   end
 
   def new
-    @passenger = Passenger.new
-    # @cars = Cars.all
+    @car = Car.find(params[:id])
+    @passenger = Passenger.new({car:@car})
   end
+
 
   def create
     @passenger = Passenger.new(passenger_params)
-
     if @passenger.save
        redirect_to @passenger
     end
