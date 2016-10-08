@@ -2,6 +2,10 @@
 
 <p>Age: <%= @passenger.age %></p>
 <p> Gender: <%= @passenger.gender %></p>
+<p> Car: <%= @passenger.car.name %></p>
+<p> Destination: <%= @passenger.car.destination %></p>
+
+
 
 
 <%= link_to "[Edit]", edit_passenger_path( @passenger.id ) %>
