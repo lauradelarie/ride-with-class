@@ -10,13 +10,17 @@ class PassengersController < ApplicationController
 
   def new
     @passenger = Passenger.new
-    # @cars = Cars.all
+  #   if @passenger.too_young? do
+  #     redirect_to 'new'
+  #   end
   end
 
   def create
-    @passengers = Passenger.new(passenger_params)
-    @passengers.save
-    redirect_to passengers_path
+    @passenger = Passenger.new(passenger_params)
+
+    if @passenger.save
+       redirect_to @passenger
+    end
   end
 
   def edit
