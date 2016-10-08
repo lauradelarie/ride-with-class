@@ -12,7 +12,7 @@
       <!--here comes the header -->
       <h1 class="title">Riding with Class</h1>
       <nav class="navbar">
-          <li class="nav-item"><%= link_to "Subscribe", new_passenger_path %></li>
+        <li class="nav-item"><%= link_to "Passengers", passengers_path %></li>
 
 
       </nav>
@@ -21,13 +21,14 @@
 
 <h2 class="page-title">Our Rides:</h2>
 
-<div class="cars">
+
 <% @cars.each do |car| %>
+<div class="cars">
   <p class="car-name"> <img class="car-image" src=<%= car.image_url %>><br><br><%= link_to car.name, car_path(car.id) %> </p> <br><br>
   <p class="car-destination">To: <%= car.destination %></p>
+</div>
 <% end %>
 
-</div>
 
 
 </body>
