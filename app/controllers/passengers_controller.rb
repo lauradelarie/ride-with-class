@@ -10,14 +10,15 @@ class PassengersController < ApplicationController
 
   def new
     @passenger = Passenger.new
-    # @cars = Cars.all
   end
 
   def create
     @passenger = Passenger.new(passenger_params)
 
     if @passenger.save
-       redirect_to @passenger
+      redirect_to @passenger
+    else
+      render 'new'
     end
   end
 
