@@ -1,3 +1,19 @@
 <h1><%= @car.name %></h1>
 <p>capacity: <%= @car.capacity %></p>
 <p>destination: <%= @car.destination %></p>
+
+
+
+<h4>List of Passengers</h4>
+
+<% if @car.passengers.any? %>
+  <ul>
+    <% @car.passengers.each do |passenger| %>
+      <li><%= passenger.name %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are no passengers in this car.</p>
+<% end %>
+
+<%= link_to 'Back', cars_path %>
