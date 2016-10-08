@@ -22,22 +22,22 @@ class PassengersController < ApplicationController
   end
 
   def edit
-    @passengers = Passenger.find(params[:id])
+    @passenger = Passenger.find(params[:id])
   end
 
   def update
-    @passengers = Passenger.find(params[:id])
-    if @passengers.update( passenger_params )
-     redirect_to @passengers
+    @passenger = Passenger.find(params[:id])
+    if @passenger.update( passenger_params )
+     redirect_to @passenger
     else
      render 'edit'
     end
   end
 
   def destroy
-    @passengers = Passenger.find(params[:id])
+    @passenger = Passenger.find(params[:id])
 
-    @passengers.destroy
+    @passenger.destroy
 
     redirect_to passengers_path
   end
