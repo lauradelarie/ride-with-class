@@ -11,8 +11,12 @@
       <!--here comes the header -->
       <h1 class="title">Riding with Class</h1>
       <nav class="navbar">
-          <li class="nav-item"><%= link_to "Subscribe", new_passenger_path %></li>
           <li class="nav-item"><%= link_to "Rides", root_path %></li>
+          <li class="nav-item"><%= link_to "Subscribe", new_passenger_path(:id => @car.id) %></li>
+
+          <li class="nav-item"><%= link_to "Passengers", passengers_path %></li>
+
+          <li class="nav-item"><%= link_to "Back", root_path %></li>
 
 
       </nav>
@@ -43,7 +47,3 @@
 <% end %>
 
 <!-- <%= link_to "[delete car]", car_path(@car.id), method: :delete, data: {confirm: "Are you sure?"} %> -->
-
-<%= link_to "[New Passenger]", new_passenger_path(:id => @car.id) %>
-<%= link_to "[Show all Passengers]", passengers_path %>
-<%= link_to 'Back', cars_path %>
