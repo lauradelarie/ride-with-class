@@ -1,6 +1,33 @@
-<h1>Cars to choose from</h1>
+
+
+
+<head>
+  <title>Riding with Class</title>
+<link href="https://fonts.googleapis.com/css?family=Audiowide|Baloo+Da|BioRhyme|Bungee+Shade|Eczar|Fontdiner+Swanky|Homemade+Apple|Walter+Turncoat" rel="stylesheet">
+
+</head>
+<body>
+
+  <header class="header">
+      <!--here comes the header -->
+      <h1 class="title">Riding with Class</h1>
+      <nav class="navbar">
+          <li class="nav-item"><%= link_to "Subscribe", new_passenger_path %></li>
+
+
+      </nav>
+  </header>
+
+
+<h2 class="page-title">Our Rides:</h2>
+
+<div class="cars">
 <% @cars.each do |car| %>
-  <p><%= link_to car.name, car_path(car.id) %></p>
-  <p><%= car.destination %></p>
-  -------------------------------
+  <p class="car-name"> <img class="car-image" src=<%= car.image_url %>><br><br><%= link_to car.name, car_path(car.id) %> </p> <br><br>
+  <p class="car-destination">To: <%= car.destination %></p>
 <% end %>
+
+</div>
+
+
+</body>

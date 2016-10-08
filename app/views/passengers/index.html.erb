@@ -1,8 +1,27 @@
-<h1>hello passengers</h1>
-<% @passengers.each do |passenger| %>
-  <p><%= link_to passenger.name, passenger_path(passenger.id) %></p>
-<% end %>
+<head>
+  <title>Riding with Class</title>
+<link href="https://fonts.googleapis.com/css?family=Audiowide|Baloo+Da|BioRhyme|Bungee+Shade|Eczar|Fontdiner+Swanky|Homemade+Apple|Walter+Turncoat" rel="stylesheet">
 
-<%= link_to "[New Passenger]", new_passenger_path %>
-<%= link_to "[Show all cars]", root_path %>
-<%= link_to "[All Passenger]", passengers_path %>
+</head>
+<body>
+
+  <header class="header">
+      <!--here comes the header -->
+      <h1 class="title">Riding with Class</h1>
+      <nav class="navbar">
+          <li class="nav-item"><%= link_to "Subscribe", new_passenger_path %></li>
+          <li class="nav-item"><%= link_to "Rides", root_path %></li>
+
+
+      </nav>
+  </header>
+
+
+<h2 class="page-title">Passengers</h2>
+
+  <% @passengers.each do |passenger| %>
+    <p><%= link_to passenger.name, passenger_path(passenger.id) %></p>
+  <% end %>
+
+
+</body>
