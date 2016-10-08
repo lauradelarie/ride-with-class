@@ -9,7 +9,8 @@ class PassengersController < ApplicationController
   end
 
   def new
-    @passenger = Passenger.new
+    @car = Car.find(params[:id])
+    @passenger = Passenger.new({car:@car})
   end
 
   def create
