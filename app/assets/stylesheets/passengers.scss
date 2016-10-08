@@ -1,3 +1,71 @@
 // Place all the styles related to the Passengers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.header{
+  display:flex;
+  max-width:1250px;
+  margin:auto;
+  justify-content:space-between;
+  letter-spacing:2px;
+  font-family:'Slabo 27px', sans-serif;
+  color:#074E65;
+}
+  .title{
+    font-family: 'Bungee Shade', serif;
+    font-size:60px;
+    text-align:left;
+  }
+
+.page-title{
+
+}
+
+  .navbar{
+    font-family:'Slabo 27px', sans-serif;
+    display:flex;
+    list-style-type: none;
+    align-items: center;
+    letter-spacing:1px;
+  }
+
+  .nav-item{
+    font-family: 'Eczar', sans-serif;
+    font-size: 20px;
+    margin:10px;
+    text-decoration:none;
+  }
+
+
+
+body{
+  background: rgb(255, 236, 213);
+}
+
+.cars{
+  display:flex;
+  // flex-wrap: wrap;
+  justify-content: center;
+  float:left;
+}
+
+.car-name {
+  font-family: 'Eczar', sans-serif;
+  font-size: 20px;
+  margin:10px;
+  text-decoration:none;
+}
+
+.car-destination{
+  font-family: 'Eczar', sans-serif;
+  font-size: 18px;
+  margin:10px;
+  text-decoration:none;
+
+}
+
+.car-image {
+  width: 250px;
+  height:200px;
+
+}
