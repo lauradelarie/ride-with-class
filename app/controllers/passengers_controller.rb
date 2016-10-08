@@ -15,8 +15,10 @@ class PassengersController < ApplicationController
 
   def create
     @passenger = Passenger.new(passenger_params)
-    @passenger.save
-    redirect_to passengers_path
+
+    if @passenger.save
+       redirect_to @passenger
+    end
   end
 
   def edit
