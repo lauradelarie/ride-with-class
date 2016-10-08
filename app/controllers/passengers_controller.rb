@@ -10,6 +10,7 @@ class PassengersController < ApplicationController
 
   def new
     @passenger = Passenger.new
+    # @cars = Cars.all
   end
 
   def create
@@ -33,7 +34,7 @@ class PassengersController < ApplicationController
   private
 
   def passenger_params
-    params.require(:passenger).permit(:name, :age, :gender)
+    params.require(:passenger).permit(:name, :age, :gender, :car_id)
   end
 
 end

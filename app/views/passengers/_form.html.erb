@@ -9,5 +9,8 @@
    <%= f.label :gender %>
    <%= f.text_field :gender %>
 
+   <%= f.label :car_id %>
+   <%= f.collection_select(:car_id, Car.all, :id, :name) %>
+
    <%= f.submit (@passenger.new_record? ? "Create" : "Update") %>
 <% end %>
