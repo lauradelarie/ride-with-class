@@ -3,6 +3,7 @@ class Passenger < ApplicationRecord
 
   validates :name, presence: true
   validates :age, exclusion: {in: 1...18}, length: { maximum: 2 },  allow_blank: true
+  validates :car, presence:true
 
   def too_young?
     age < 18

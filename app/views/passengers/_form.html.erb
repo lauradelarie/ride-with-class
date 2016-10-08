@@ -1,4 +1,10 @@
 <%= form_for @passenger do |f| %>
+    <ul>
+      <% @passenger.errors.each do |msg| %>
+      <li><%= msg %>:   "You are too young!"</li>
+          <% end %>
+
+    </ul>
 
    <%= f.label :name %>
    <%= f.text_field :name %>
@@ -9,8 +15,8 @@
    <%= f.label :gender %>
    <%= f.text_field :gender %>
 
-   <%= f.label :car_id %>
-   <%= f.collection_select(:car_id, Car.all, :id, :name) %>
+   <%= f.label :destination %>
+   <%= f.collection_select(:car_id, Car.all, :id, :destination) %>
 
    <%= f.submit (@passenger.new_record? ? "Create" : "Update") %>
 <% end %>
