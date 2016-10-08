@@ -1,6 +1,28 @@
-<h1>Edit my passenger ifo</h1>
+<head>
+  <title>Riding with Class</title>
+<link href="https://fonts.googleapis.com/css?family=Audiowide|Baloo+Da|BioRhyme|Bungee+Shade|Eczar|Fontdiner+Swanky|Homemade+Apple|Walter+Turncoat" rel="stylesheet">
+
+</head>
+<body>
+
+  <header class="header">
+      <!--here comes the header -->
+      <h1 class="title">Riding with Class</h1>
+      <nav class="navbar">
+          <li class="nav-item"><%= link_to "Subscribe", new_passenger_path %></li>
+          <li class="nav-item"><%= link_to "Rides", root_path %></li>
+
+
+      </nav>
+  </header>
+
+
+<h2 class="page-title">Edit Passenger infor</h2>
 
 <%= render "form" %>
 
 <%= link_to "[Show all Passengers]", passengers_path %>
 <%= link_to "[Show all cars]", root_path %>
+
+
+</body>

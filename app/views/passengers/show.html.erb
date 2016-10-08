@@ -1,4 +1,28 @@
-<h1><%= @passenger.name %></h1>
+
+
+<head>
+  <title>Riding with Class</title>
+<link href="https://fonts.googleapis.com/css?family=Audiowide|Baloo+Da|BioRhyme|Bungee+Shade|Eczar|Fontdiner+Swanky|Homemade+Apple|Walter+Turncoat" rel="stylesheet">
+
+</head>
+<body>
+
+  <header class="header">
+      <!--here comes the header -->
+      <h1 class="title">Riding with Class</h1>
+      <nav class="navbar">
+          <li class="nav-item"><%= link_to "Subscribe", new_passenger_path %></li>
+          <li class="nav-item"><%= link_to "Rides", root_path %></li>
+
+
+      </nav>
+  </header>
+
+
+<h2 class="page-title"><%= @passenger.name %></h2>
+
+
+
 
 <p>Age: <%= @passenger.age %></p>
 <p> Gender: <%= @passenger.gender %></p>
@@ -13,3 +37,6 @@
 
 <%= link_to "[Show all cars]", root_path %>
 <%= link_to "[All Passenger]", passengers_path %>
+
+
+</body>
