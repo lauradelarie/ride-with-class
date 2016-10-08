@@ -4,6 +4,7 @@
 <p> Gender: <%= @passenger.gender %></p>
 
 
+<%= link_to "[Edit]", edit_passenger_path( @passenger.id ) %>
 <%= link_to "[Delete]", passenger_path( @passenger.id ), method: :delete, data: { confirm: "Are you sure?" } %>
 
 <%= link_to "[All Passenger]", passengers_path %>
