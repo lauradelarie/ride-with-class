@@ -1,4 +1,6 @@
 <h1>Cars to choose from</h1>
 <% @cars.each do |car| %>
   <p><%= link_to car.name, car_path(car.id) %></p>
-<% end %> -->
+  <p><%= car.destination %></p>
+  -------------------------------
+<% end %>
